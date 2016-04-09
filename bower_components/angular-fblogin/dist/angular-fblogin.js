@@ -74,7 +74,7 @@
                         appId      : options.fbId,
                         cookie     : true,
                         xfbml      : true,
-                        version    : 'v2.0'
+                        version    : 'v2.5'
                     });
 
                     isFbInitiated = true;
