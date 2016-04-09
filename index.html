@@ -32,21 +32,34 @@
                 <div class="timer">
                     <span countdown='' date='July 28, 2016 16:00:00'>&nbsp;</span>
                 </div>
+                <div ng-hide="brawoTy" class="fb">
+                    <p>Brawo Ty Rafał</p>                 
+                    <p><img src="./img/5.jpg" alt=""></p>
+                </div>
                 <div class="btn-container" ng-show="brawoTy">
                     <a href="#" class="bttn" ng-click="login()" style="text-decoration: none;color: #fff;">Witaj Budvo!!!</a>
                 </div>
-                
-                <div><p>{{Dane().data.first_name}}</p></div>
+
+                <div>
+                    <p>{{Dane()}}</p>
+                </div>
+                <div>
+                    <p>{{Dane().first_name}}</p>
+                </div>
+                <div>
+                    <p>{{Dane().data.first_name}}</p>
+                </div>
+
             </div>
-                
+
         </div>
     </div>
-    <div  class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
     </div>
 </body>
 <script src="countdown.js"></script>
 <script>
-  window.fbAsyncInit = function() {
+    window.fbAsyncInit = function() {
     FB.init({
       appId      : '222660488094320',
       xfbml      : true,
@@ -61,6 +74,7 @@
      js.src = "//connect.facebook.net/pl_PL/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
 </script>
 
 </html>

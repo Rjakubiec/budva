@@ -6,12 +6,12 @@
 .warrper{
     top: 40%;
     left: 20%;
-    height: 150px;
+    height: 200px;
     width: 100%;
     position: fixed;
 }
 .blur{
-    height: 150px;
+    height: 200px;
     width: 800px;
     background: blue;
     filter:blur(2px) sepia(100%) grayscale(10%);
@@ -31,6 +31,29 @@
     font-size: 38px;
     color: white;
 }
+
+.warrper p{
+    text-align: center;
+    font-family: myFont, cursive; 
+    width: 60%;
+    font-size: 18px;
+    color: white;   
+    position: relative;
+}
+
+.fb{
+    
+    padding: 70px 0px;
+}
+
+.warrper p>img{
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    position: relative;
+}
+    
+
 @keyframes colors {
   0% {
     background: url("./img/1.jpg") no-repeat fixed center;
