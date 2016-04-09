@@ -12,12 +12,12 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin) {
             fields: 'first_name,last_name,email,birthday,picture',
             success: function(data) {
                 console.log(data);
-                $scope.Dane = function() {
+               
                     return [
                         $scope.imie=data.first_name,
                        data.last_name,
                       $scope.zdj=data.picture.data.url
-                    ];}
+                    ];
                 },
                     error: function(error) {
                         console.log('An error occurred.', error);
