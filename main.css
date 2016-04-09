@@ -46,12 +46,6 @@
     padding: 70px 0px;
 }
 
-.warrper p>img{
-    text-align: center;
-    height: 75px;
-    width: 75px;
-    position: relative;
-}
     
 
 @keyframes colors {
@@ -77,6 +71,8 @@ body {
   background-size: 100% 100%;
   animation: colors 15s linear infinite;
 }
+
+
 
 /*button*/
 
@@ -243,3 +239,15 @@ body {
     transform: translateY(-6px);
   }
 }
+/*owal*/
+.circular {
+    left: 27%;
+    z-index: 3;
+	width: 75px;
+	height: 75px;
+	border-radius: 45px;
+	-webkit-border-radius: 45px;
+	-moz-border-radius: 45px;
+    position: relative;
+	
+	}
