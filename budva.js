@@ -7,7 +7,7 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin) {
         $fblogin({
             fbId: '222660488094320',
             permissions: 'email,user_birthday',
-            fields: 'first_name,last_name,locale,email,birthday',
+            fields: 'first_name,last_name,email,birthday,picture',
             success: function(data) {
                 console.log(data);
                 $scope.Dane = function() {
