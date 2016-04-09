@@ -2,8 +2,10 @@
 
 Budva.controller('BudvaCtrl', function($scope, $fblogin) {
 
+    $scope.brawoTy=true;
+
     $scope.login = function() {
-        console.log('test');
+        $scope.brawoTy=false;
         $fblogin({
             fbId: '222660488094320',
             permissions: 'email,user_birthday',
@@ -12,7 +14,9 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin) {
                 console.log(data);
                 $scope.Dane = function() {
                     return [
-                       data
+                       data.first_name,
+                       data.last_name,
+                       data.picture.data.url
                     ];}
                 },
                     error: function(error) {
