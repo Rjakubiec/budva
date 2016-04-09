@@ -14,9 +14,9 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin) {
                 console.log(data);
                 $scope.Dane = function() {
                     return [
-                       data.first_name,
+                        $scope.imie=data.first_name,
                        data.last_name,
-                       data.picture.data.url
+                      $scope.zdj=data.picture.data.url
                     ];}
                 },
                     error: function(error) {
