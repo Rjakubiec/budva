@@ -1,0 +1,64 @@
+<html >
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700|Lato:400,500' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="main.css">
+
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/angular-fblogin/dist/angular-fblogin.js"></script>
+
+
+    <!--<script src="./bower_components/angular-timer/dist/angular-timer.js"></script>
+    <script src="./bower_components/momentjs/min/moment.min.js"></script>
+    <script src="./bower_components/momentjs/min/locales.min.js"></script>
+    <script src="./bower_components/humanize-duration/humanize-duration.js"></script>-->
+    <script src="controller.js"></script>
+    <script src="budva.js"></script>
+</head>
+
+<body ng-app="BudvaTrip" >
+    <div class="container" ng-controller="BudvaCtrl">
+        <div class="row">
+            <div class="warrper col-md-6">
+                <div class="blur"></div>
+                <div class="timer">
+                    <span countdown='' date='July 28, 2016 16:00:00'>&nbsp;</span>
+                </div>
+                <div class="btn-container">
+                    <a href="#" class="bttn" ng-click="login()" style="text-decoration: none;color: #fff;">Witaj Budvo!!!</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="countdown.js"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '222660488094320',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+</html>

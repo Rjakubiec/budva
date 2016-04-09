@@ -1,0 +1,14 @@
+{
+  "name": "budva",
+  "version": "1.0.0",
+  "description": "Countdown",
+  "main": "controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "rjakubiec",
+  "license": "MIT"
+}
