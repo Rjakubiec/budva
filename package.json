@@ -4,6 +4,7 @@
   "description": "Countdown",
   "main": "controller.js",
   "engines": {
+    "node": ">=0.10.0",
     "npm": "3.6.0"
   },
   "scripts": {
@@ -12,7 +13,11 @@
   "keywords": [
     "angularjs"
   ],
-  
   "author": "rjakubiec",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node": "0.0.0",
+    "nodejs": "0.0.0"
+  }
 }
