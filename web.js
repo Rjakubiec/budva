@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.all('/*', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost/budva");
+    res.header("Access-Control-Allow-Origin", "https://budvatrip.herokuapp.com");
     res.header("Access-Control-Allow-Headers", "X-Requested-With,Content-Type,Origin,__setXHR_");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,DELETE,POST,OPTIONS');
     res.header('Access-Control-Allow-Credentials', "true");
@@ -40,7 +40,7 @@ app.get('/',function (request,response) {
 app.post('/zapisany', function (req, res, next) {
 
     var zapisany = new Zapisany();
-   console.log(req.body.data.first_name);
+    console.log(req.body.data.first_name);
     zapisany.imie=req.body.data.first_name;
     zapisany.email=req.body.data.last_name;
     zapisany.email=req.body.data.picture.data.url;
