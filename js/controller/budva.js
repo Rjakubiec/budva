@@ -1,6 +1,6 @@
 'use strict';
 
-Budva.controller('BudvaCtrl', function($scope, $fblogin) {
+Budva.controller('BudvaCtrl', function($scope, $fblogin,$http) {
 
     $scope.brawoTy=true;
 
