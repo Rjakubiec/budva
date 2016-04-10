@@ -1,7 +1,7 @@
 /*@import url(http://fonts.googleapis.com/css?family=Indie+Flower);*/
 @font-face {
     font-family: myFont;
-    src: url("./fonts/indie_flower/IndieFlower.ttf");
+    src: url("../fonts/indie_flower/IndieFlower.ttf");
 }
 .warrper{
     top: 40%;
@@ -50,24 +50,24 @@
 
 @keyframes colors {
   0% {
-    background: url("./img/1.jpg") no-repeat fixed center;
+    background: url("../img/1.jpg") no-repeat fixed center;
     background-size: 100% 100%;
   }
   25% {
-    background: url("./img/5.jpg") no-repeat fixed center;
+    background: url("../img/5.jpg") no-repeat fixed center;
     background-size: 100% 100%;
   }
   50% {
-    background: url("./img/3.jpg") no-repeat fixed center;
+    background: url("../img/3.jpg") no-repeat fixed center;
     background-size: 100% 100%;
   }
   75% {
-    background: url("./img/4.jpg") no-repeat fixed center;
+    background: url("../img/4.jpg") no-repeat fixed center;
     background-size: 100% 100%;
   }
 }
 body {
-  background: url("./img/1.jpg") no-repeat fixed center;
+  background: url("../img/1.jpg") no-repeat fixed center;
   background-size: 100% 100%;
   animation: colors 15s linear infinite;
 }

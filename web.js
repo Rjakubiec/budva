@@ -6,12 +6,7 @@ var path = require('path');
 
 var app = express();
 
-// app.configure(function () {
-//     app.use(express.bodyParser());
-//     app.use(express.logger());
-//     app.use(express.static(path.join(__dirname,'dist')));
-    
-// });
+var Zapisany = require('./model/zapisany');
 
 mongoose.connect('mongodb://rjakubiec:rjakubiec@ds013310.mlab.com:13310/budva', function (err) {
     if (err) {
@@ -34,14 +29,39 @@ app.all('/*', function (req, res, next) {
 });
 
 app.use(express.static(__dirname + '/'));
-//add this so the browser can GET the bower files
+
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 app.get('/',function (request,response) {
     response.send("Ups coś poszło nie tak");
 })
 
-// var port = process.env.Port || 5000;
+//zapis
+app.post('/zapisany', function (req, res, next) {
+
+    var zapisany = new Zapisany();
+   console.log(req.body.data.first_name);
+    zapisany.imie=req.body.data.first_name;
+    zapisany.email=req.body.data.last_name;
+    zapisany.email=req.body.data.picture.data.url;
+
+    zapisany.save(function (err) {
+
+        if (err) return next(err);
+        res.json('Poprawnioe dodano ;-)');
+
+    });
+});
+
+
+app.get('/zapisani', function (req, res, next) {
+    Zapisany.find(function (err, zapisany) {
+        if (err) res.json('error:' + err);
+
+        res.json(zapisany);
+    });
+});
+
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Serwer działa na porcie", this.address().port, app.settings.env);

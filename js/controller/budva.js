@@ -12,7 +12,12 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin) {
             fields: 'first_name,last_name,email,birthday,picture',
             success: function(data) {
                 console.log(data);
-               
+                $http.post('http://localhost:3000/zapisany', data)
+                .then(function () {
+                    console.log('dodano');
+                    $window.location.reload();
+
+                });            
                     return [
                         $scope.imie=data.first_name,
                        data.last_name,
