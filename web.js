@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.all('/*', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://budvatrip.herokuapp.com");
+    // res.header("Access-Control-Allow-Origin", "https://budvatrip.herokuapp.com");
     res.header("Access-Control-Allow-Headers", "X-Requested-With,Content-Type,Origin,__setXHR_");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,DELETE,POST,OPTIONS');
     res.header('Access-Control-Allow-Credentials', "true");
