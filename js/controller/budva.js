@@ -12,7 +12,7 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin,$http) {
             fields: 'first_name,last_name,email,birthday,picture',
             success: function(data) {
                 console.log(data);
-                $http.post('http://localhost:3000/zapisany', data)
+                $http.post('https://budvatrip.herokuapp.com/zapisany', data)
                 .then(function () {
                     console.log('dodano');
                     $window.location.reload();
