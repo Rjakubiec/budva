@@ -15,7 +15,7 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin,$http) {
                 $http.post('https://budvatrip.herokuapp.com/zapisany', data)
                 .then(function () {
                     console.log('dodano');
-                    $window.location.reload();
+        
 
                 });            
                     return [
@@ -24,7 +24,7 @@ Budva.controller('BudvaCtrl', function($scope, $fblogin,$http) {
                       $scope.zdj=data.picture.data.url
                     ];
                 },
-                    error: function(error) {
+                    error: function(error) {             
                         console.log('An error occurred.', error);
                     }
             });
