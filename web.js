@@ -42,8 +42,8 @@ app.post('/zapisany', function (req, res, next) {
     var zapisany = new Zapisany();
     //console.log(req.body.data.first_name);
     zapisany.imie=req.body.first_name;
-    zapisany.email=req.body.last_name;
-    //zapisany.email=req.body.picture.data.url;
+    zapisany.nazwisko=req.body.last_name;
+    zapisany.zdj=req.body.picture.data.url;
 
     zapisany.save(function (err) {
 

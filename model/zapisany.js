@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var ZapisanySchema = new Schema({
     imie: String,
-    email: String,
+    nazwisko: String,
     zdj: String
 });
 
