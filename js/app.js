@@ -13,6 +13,10 @@ var Budva = angular.module('BudvaTrip',
             .when('/', {
                 templateUrl: 'index.html',
                 controller: 'BudvaCtrl'
+            })
+            .when('/mapa',{
+                templateUrl: 'view/mapa.html',
+                controller: 'MapaCtrl'
             });
 });
 
