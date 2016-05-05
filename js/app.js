@@ -15,6 +15,7 @@ var Budva = angular.module('BudvaTrip',
                 controller: 'BudvaCtrl'
             })
             .when('/mapa',{
+
                 templateUrl: './view/mapa.html',
                 controller: 'MapaCtrl'
             });
