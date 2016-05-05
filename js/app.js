@@ -11,8 +11,12 @@ var Budva = angular.module('BudvaTrip',
 
         $routeProvider
             .when('/', {
-                templateUrl: 'index.html',
+                templateUrl: './view/budva.html',
                 controller: 'BudvaCtrl'
+            })
+            .when('/mapa',{
+                templateUrl: './view/mapa.html',
+                controller: 'MapaCtrl'
             });
 });
 
